@@ -1,0 +1,18 @@
+{
+  "name": "crmgraphqlmongo",
+  "version": "1.0.0",
+  "description": "Desarrollo en GraphQl, Mongo, React",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "author": "Eloi Calva Mtz",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.14.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
