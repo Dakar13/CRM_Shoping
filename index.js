@@ -5,11 +5,11 @@ const resolvers = require("./db/resolvers");
 const jwt = require("jsonwebtoken");
 require("dotenv").config({ path: "variables.env" });
 
-// Conexion a DB de Mongo
+/* Conexion a DB de Mongo */
 const conectarDB = require("./config/db");
 conectarDB();
 
-// servidor
+/* Servidor */
 const server = new ApolloServer({
   typeDefs,
   resolvers,
@@ -21,7 +21,6 @@ const server = new ApolloServer({
           token.replace("Bearer ", ""),
           process.env.SECRETKEY
         );
-        // console.log(usuario);
         return {
           usuario,
         };
@@ -33,7 +32,10 @@ const server = new ApolloServer({
   },
 });
 
-// arrancar el servidor
+/* Arrancar el servidor */
 server.listen().then(({ url }) => {
   console.log(`Servidor listo en la URL ${url}`);
 });
+/* server.listen({ port: process.env.PORT || 4000 }).then( ({url}) => {
+  console.log(`Servidor listo en la URL ${url}`)
+} ) */

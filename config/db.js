@@ -1,3 +1,4 @@
+// Dependencies
 const mongoose = require("mongoose");
 require("dotenv").config({ path: "variables.env" });
 
@@ -13,7 +14,7 @@ const conectarDB = async () => {
   } catch (error) {
     console.log("Hubo un error de conexion");
     console.log(error);
-    process.exit(1); // Detener la app en caso de error
+    process.exit(1);
   }
 };
 
